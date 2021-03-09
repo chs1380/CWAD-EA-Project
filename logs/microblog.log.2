@@ -1,0 +1,114 @@
+2021-03-06 14:45:35,365 ERROR: Exception on /user/admin [GET] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 17, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-03-06 14:46:27,668 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab07/app/__init__.py:44]
+2021-03-06 14:46:31,496 ERROR: Exception on /user/admin [GET] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 17, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-03-06 14:57:02,973 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab07/app/__init__.py:44]
+2021-03-06 14:57:06,275 ERROR: Exception on /user/admin [GET] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab07/app/templates/user.html", line 17, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-03-06 14:58:07,782 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab07/app/__init__.py:44]

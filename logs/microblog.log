@@ -1,0 +1,108 @@
+2021-03-06 19:16:34,857 ERROR: Exception on /reset_password_request [POST] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/routes.py", line 103, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/email.py", line 20, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/models.py", line 65, in get_reset_password_token
+    return jwt.encode(
+AttributeError: 'str' object has no attribute 'decode'
+2021-03-06 19:20:02,728 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 19:20:13,763 ERROR: Exception on /reset_password_request [POST] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/routes.py", line 103, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/email.py", line 20, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/models.py", line 65, in get_reset_password_token
+    return jwt.encode(
+AttributeError: 'str' object has no attribute 'decode'
+2021-03-06 20:30:18,516 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 20:30:27,687 ERROR: Exception on /reset_password_request [POST] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/routes.py", line 103, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/email.py", line 20, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/models.py", line 65, in get_reset_password_token
+    return jwt.encode(
+AttributeError: 'str' object has no attribute 'decode'
+2021-03-06 20:35:34,557 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 20:35:39,809 ERROR: Exception on /reset_password_request [POST] [in /Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hoshingcheung/PycharmProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/routes.py", line 103, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/email.py", line 20, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/hoshingcheung/PycharmProjects/microblog_lab09/app/models.py", line 65, in get_reset_password_token
+    return jwt.encode(
+AttributeError: 'str' object has no attribute 'decode'
+2021-03-06 20:37:56,424 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 20:44:31,222 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 20:47:20,985 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 20:58:16,179 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 21:08:38,378 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab09/app/__init__.py:45]
+2021-03-06 22:25:42,151 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab10/app/__init__.py:47]
+2021-03-06 22:51:54,341 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab11/app/__init__.py:49]
+2021-03-06 23:34:47,253 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-07 04:50:11,193 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-07 04:50:56,132 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-07 04:51:14,328 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-07 04:52:48,128 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-07 04:53:10,212 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab12/app/__init__.py:52]
+2021-03-08 15:35:03,220 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:43:42,814 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:45:00,111 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:45:08,084 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:45:19,756 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:47:36,990 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-08 15:49:06,320 INFO: Microblog startup [in /Users/hoshingcheung/PycharmProjects/microblog_lab13/app/__init__.py:74]
+2021-03-10 05:39:47,036 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment/lihkg/app/__init__.py:74]
