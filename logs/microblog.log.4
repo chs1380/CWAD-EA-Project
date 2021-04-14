@@ -1,0 +1,96 @@
+2021-04-12 16:07:50,796 ERROR: Exception on /post/1 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 119, in post
+    return render_template('post.html', post=post, form=form, comment=comment, current_user=current_user)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/post.html", line 27, in <module>
+    {{ for item in comment: }}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/lexer.py", line 381, in expect
+    raise TemplateSyntaxError("expected token %r, got %r" %
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'item'
+2021-04-12 16:10:23,952 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-12 16:10:49,489 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-12 16:14:28,858 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 119, in post
+    return render_template('post.html', post=post, form=form, comments=comment, current_user=current_user)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/post.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/post.html", line 36, in <module>
+    {{ post.timestamp.strftime('%d %B, %Y') }}&nbsp;
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'timestamp'
