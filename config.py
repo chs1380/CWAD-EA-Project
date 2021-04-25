@@ -16,3 +16,4 @@ class Config(object):
     ADMINS = ['your-email@example.com']
     LANGUAGES = ['en', 'es', 'zh']
     POSTS_PER_PAGE = 25
+ #   CATEGORY = 'explore', 'relationship', 'blackhole'

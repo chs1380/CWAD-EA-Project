@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block body %}
+<div class="h1">
+    {{ post.title }}
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <a href="{{ url_for('main.casual') }}" class="btn btn-default btn-sm">
+            <i class="glyphicon glyphicon-arrow-left"></i> 上一頁
+        </a>
+    </div>
+</div>
+
+<div class="row pad">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="row">
+                    {#    <div class="col-lg-12">
+                        <p class="CrheYfsiQFY-vLMnO378W">{{ post.body }}</p>
+                    </div>
+                    <div class="col-lg-12">
+                    <p class="CrheYfsiQFY-vLMnO378W">
+                    #}
+                    <table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                <img src="{{ post.author.avatar(70) }}"/>
+            </a>
+        </td>
+        <td>
+            {% set user_link %}
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                {{ post.author.username }}
+            </a>
+            {% endset %}
+            {{ _('%(username)s 發表於%(when)s',
+                    username=user_link, when=moment(post.timestamp).fromNow()) }}
+            <br>
+                {{ post.body }}
+{# our_user = session.query(User).filter_by(name='ed').first() #}
+{# {{ post.body|filterpost }} #}
+            </a>
+        </td>
+    </tr>
+</table>
+                    </div>
+                    <div class="col-lg-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="">Comment &mdash; ({{ comment|length }} total)</h3>
+{% for comment in comments %}
+<div class="panel panel-primary reply" id="r1" style="border-radius: 10px;">
+    <div class="panel-body">
+        <div class="row reply">
+            <div class="col-lg-9">
+                <div class="reply-msg">
+                    <table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                <img src="{{ post.author.avatar(70) }}"/>
+            </a>
+        </td>
+        <td>
+            {% set user_link %}
+            <a href="{{ url_for('main.user', username=post.author.username) }}">
+                {{ post.author.username }}
+            </a>
+            {% endset %}
+            {{ _('%(username)s 發表於%(when)s',
+                    username=user_link, when=moment(post.timestamp).fromNow()) }}
+            <br>
+                {{ comment.body }}
+{# our_user = session.query(User).filter_by(name='ed').first() #}
+{# {{ post.body|filterpost }} #}
+            </a>
+        </td>
+    </tr>
+</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+</nav>
+
+{# {% if not current_user.is_anonymous %} #}
+{% if not current_user.active %} {# <!-- the code here should be:  ***if current_user.active***.--> #}
+    <div class="row pad">
+    <div class="col-lg-12 pad">
+        <div class="panel panel-primary">
+            {# <!-- <div class="panel-heading big"> #}
+            {#                <i class="glyphicon glyphicon-comment"></i> Post Reply #}
+            {#            </div> --> #}
+            <div class="panel-body pad" id="_reply">
+                <form method="POST" role="form" id="theForm">
+                    {{ form.csrf_token }}
+                    <div class="form-group">
+                        {{ form.message(class="form-control", rows="5") }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="glyphicon glyphicon-save"></i> Submit
+                    </button> &nbsp;
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

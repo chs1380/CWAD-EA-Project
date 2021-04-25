@@ -22,6 +22,7 @@ class User(UserMixin, db.Model):
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    comment = db.relationship('Comment', backref='user', lazy='dynamic')
     followed = db.relationship(
         'User', secondary=followers,
         primaryjoin=(followers.c.follower_id == id),
@@ -81,11 +82,37 @@ def load_user(id):
     return User.query.get(int(id))
 
 
+class Category(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(100), nullable=False)
+    post = db.relationship('Post', backref='post', lazy='dynamic')
+
+    def __repr__(self):
+        return '<Category {}>'.format(self.body)
+
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.String(140))
+    title = db.Column(db.String(140), nullable=False)
+    body = db.Column(db.String(3000), nullable=False)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    comment = db.relationship('Comment', backref='post', lazy='dynamic')
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    body = db.Column(db.String(140), nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=False)
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+
+    def __repr__(self):
+        return '<Comment {}>'.format(self.body)
+
+
+
