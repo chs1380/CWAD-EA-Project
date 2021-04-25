@@ -11,12 +11,14 @@
                 {{ post.author.username }}
             </a>
             {% endset %}
-            {{ _('%(username)s said %(when)s',
+            {{ _('%(username)s 發表於%(when)s',
                     username=user_link, when=moment(post.timestamp).fromNow()) }}
             <br>
-            <a href="{{ url_for('main.casual') }}">
-                {{ post.body }}
-
+        {#  <a href="{{ url_for('main.post', qry=qry)}}">{{post.title.qry}}</a> #}
+        {# <a href="{{ url_for('main.post')}}">{{post.title}}</a> #}
+            <a href="{{ url_for('main.casual')}}">{{post.title}}</a
+{# our_user = session.query(User).filter_by(name='ed').first() #}
+{# {{ post.body|filterpost }} #}
             </a>
         </td>
     </tr>
