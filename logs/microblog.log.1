@@ -1,4 +1,11 @@
-2021-04-12 20:53:43,554 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+2021-04-25 13:39:37,260 ERROR: Exception on /auth/login [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/processors.py", line 33, in process
+    m = rmatch(value)
+TypeError: expected string or bytes-like object
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +19,46 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    #print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 20:53:45,863 ERROR: Exception on /post/5 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2835, in first
+    ret = list(self[0:1])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2627, in __getitem__
+    return list(res)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 98, in instances
+    util.raise_from_cause(err)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 79, in instances
+    rows = [proc(row) for row in fetch]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 79, in <listcomp>
+    rows = [proc(row) for row in fetch]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 509, in _instance
+    _populate_full(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 611, in _populate_full
+    dict_[key] = getter(row)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/result.py", line 93, in __getitem__
+    return processor(self._row[index])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/processors.py", line 35, in process
+    raise ValueError("Couldn't parse %s string '%r' "
+ValueError: Couldn't parse datetime string '1619328937577' - value is not a string.
+2021-04-25 13:44:47,358 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:47:37,533 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:47:56,464 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:48:09,305 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:49:29,625 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:53:16,700 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:54:58,616 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:55:05,714 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:55:29,402 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:56:09,384 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:56:27,325 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:57:07,338 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 13:58:18,189 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 14:11:21,704 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
+2021-04-25 14:11:54,861 ERROR: Exception on /post/3 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -29,93 +72,32 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    #print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 20:53:54,913 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 122, in post
+    return render_template('post.html', post=post, form=form, comments=comment, current_user=current_user)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    #print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 20:56:07,745 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
-2021-04-12 20:56:33,068 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
-2021-04-12 20:56:35,255 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 21:00:56,240 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 22:45:12,758 ERROR: Exception on /post/4 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    print(comment[0].body)
-IndexError: list index out of range
-2021-04-12 22:45:28,467 ERROR: Exception on /post/2 [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/main/routes.py", line 118, in post
-    print(comment[0].body)
-IndexError: list index out of range
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/post.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/templates/post.html", line 32, in <module>
+    <a href="{{ url_for('main.user', username=post.author.username) }}">
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'author'
