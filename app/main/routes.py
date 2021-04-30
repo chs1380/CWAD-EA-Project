@@ -6,7 +6,7 @@ from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm, NewReply, EditPostForm
 from app.models import User, Post, Comment
 from app.main import bp
-
+from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user, login_required
 
 @bp.before_request
 def before_request():
@@ -82,7 +82,7 @@ def blackhole():
                            prev_url=prev_url)
 
 
-from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user, login_required
+
 
 @bp.route('/post/<post_id>', methods=['GET', 'POST'])
 # @login_required

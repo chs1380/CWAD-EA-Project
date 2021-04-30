@@ -1,4 +1,4 @@
-2021-04-25 12:51:03,584 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
+2021-04-25 12:51:07,399 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1758]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -55,3 +55,4 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/werkzeug/routing.py", line 1776, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'main.post'. Did you forget to specify values ['post_id']?
+2021-04-25 12:52:37,554 INFO: Microblog startup [in /Users/hoshingcheung/Downloads/environment(chscc - please let me finish this)/lihkg/app/__init__.py:74]
