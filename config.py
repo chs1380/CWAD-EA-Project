@@ -1,3 +1,5 @@
+from flask import Flask,session
+from datetime import timedelta
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -16,4 +18,3 @@ class Config(object):
     ADMINS = ['your-email@example.com']
     LANGUAGES = ['en', 'es', 'zh']
     POSTS_PER_PAGE = 25
- #   CATEGORY = 'explore', 'relationship', 'blackhole'

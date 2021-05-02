@@ -54,6 +54,7 @@ def casual():
                            prev_url=prev_url)
 
 
+
 @bp.route('/relationship', methods=['GET', 'POST'])
 def relationship():
     page = request.args.get('page', 1, type=int)
