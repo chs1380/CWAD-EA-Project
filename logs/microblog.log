@@ -115,3 +115,6 @@ Traceback (most recent call last):
     page = request.args.get('page', 1, type=int)
 NameError: name 'session' is not defined
 2021-05-02 04:54:37,832 INFO: Microblog startup [in /home/ec2-user/environment/lihkg/app/__init__.py:74]
+2021-05-02 05:09:23,883 INFO: Microblog startup [in /home/ec2-user/environment/lihkg/app/__init__.py:74]
+2021-05-02 05:10:49,517 INFO: Microblog startup [in /home/ec2-user/environment/lihkg/app/__init__.py:74]
+2021-05-02 05:28:35,717 INFO: Microblog startup [in /home/ec2-user/environment/lihkg/app/__init__.py:74]
