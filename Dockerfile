@@ -10,7 +10,7 @@ RUN python3 -m venv venv
 RUN venv/bin/pip3 install --upgrade pip
 RUN venv/bin/pip3 install -r requirements.txt
 RUN venv/bin/pip3 install gunicorn
-
+RUN venv/bin/pip3 install flask_security
 COPY app app
 COPY migrations migrations
 COPY lihkg.py config.py run.py boot.sh ./
